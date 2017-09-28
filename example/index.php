@@ -1,30 +1,29 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-    function dd($d){
-        echo "<pre>";
-        print_r($d);
-        die;
-    }
-    use AmitKhare\EasyValidation; // use namespace.
+
+    use AmitKhare\EasyTranslator; // use namespace.
+
     // autoload via composer
     require __DIR__.'/../vendor/autoload.php';
-    // OR
-    // require("PATH-TO/"."validbit.php"); // only need to include if installed manually.
     
-    $v = new EasyValidation(); // instantiate EasyValidation;
-	//  OR with database for unique field check
-    //$v = new EasyValidation($host,$username,$password,$dbname); // instantiate EasyValidation With Database features;
-    $v->setSource($_GET); // set data source array;
+    // require("PATH-TO/"."EasyTranslator.php"); // if installed manually.
     
-    $v->setLocale("hi-IN",__DIR__."/../src/locales/"); 
+    $t = new EasyTranslator(); // instantiate EasyTranslator;
+    $t->setLocalePath("PATH/TO/LOCALES/DIRECTORY/"); 
+    $t->setLocale("en-IN"); 
     
-    $v->check("mobile","required|numeric|min:10|max:15");
-    $v->check("username","required|min:4|max:20");
-    $v->check("email","required|email|unique:users.email|min:4|max:100");
+    $keyString = "FIELD_NOT_SET";
+    $replacements = ["USERNAME"];
+    $locale = "hi-IN";
+
+    echo $t->translate($keyString);
+    //OUTPUT: The field is not set.
     
-    $v->match("password","password_confirm");
+    // OR ###########################################
+    echo $t->translate($keyString,$replacements);
+    //OUTPUT: The `Username` field is not set.
     
-    if(!$v->isValid()){
-    	dd($v->getStatus());
-    }
+
+    // OR ###########################################
+    echo $t->translate($keyString,$replacements,$locale);
+    //OUTPUT: `यूजरनेम` फील्ड खली है.
+    
