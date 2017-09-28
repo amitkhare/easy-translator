@@ -53,7 +53,7 @@ Run this command from the directory in which you want to install.
     > $t->setLocalePath("PATH/TO/LOCALES/DIRECTORY/"); 
     > $t->setLocale("en-IN");
     > $t->translate($keyString,$replacements,$locale);
-## Sample Lang
+## Sample en-IN.lang file  [[JSON FORMAT]]
 ```
 {
 
