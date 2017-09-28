@@ -34,6 +34,7 @@ Run this command from the directory in which you want to install.
     $keyString = "FIELD_NOT_SET";
     $replacements = ["USERNAME"];
     $locale = "hi-IN";
+    
     echo $t->translate($keyString);
     //OUTPUT: The field is not set.
     
