@@ -44,7 +44,7 @@ class EasyTranslator {
         
         if(file_exists($localePath)) {
     
-        	self::$localePath = realpath($localePath);
+        	self::$localePath = realpath($localePath).DIRECTORY_SEPARATOR;
         	
         }
         
