@@ -18,6 +18,25 @@ Run this command from the directory in which you want to install.
     Download: https://github.com/amitkhare/easy-translator/archive/master.zip
     Extract it, require "PATH-TO/"."EasyTranslator.php" where you want to use it.
 
+## Minimal Usage:
+```sh
+<?php
+    require __DIR__.'/../vendor/autoload.php';
+    
+    $t = new AmitKhare\EasyTranslator\EasyTranslator();
+    
+    $t->setLocalePath("PATH/TO/LOCALES/DIRECTORY/");
+    
+    // save a hi-IN.lang file in above location,
+    // Note: file extention should be `.lang`
+    // i.e. :  en-IN.lang, hi-IN.lang, en-US.lang, en-UK.lang
+    
+    $t->setLocale("hi-IN"); 
+    
+    echo $t->translate("FIELD_NOT_SET",["USERNAME"]);
+    //OUTPUT: `यूजरनेम` फील्ड खली है.    
+ 
+```
 ## Usage:
 ```sh
 <?php
@@ -28,7 +47,13 @@ Run this command from the directory in which you want to install.
     // require("PATH-TO/"."EasyTranslator.php"); // if installed manually.
     
     $t = new EasyTranslator(); // instantiate EasyTranslator;
+    
     $t->setLocalePath("PATH/TO/LOCALES/DIRECTORY/"); 
+    
+    // save a hi-IN.lang file in above location,
+    // Note: file extention should be `.lang`
+    // i.e. :  en-IN.lang, hi-IN.lang, en-US.lang, en-UK.lang
+    
     $t->setLocale("en-IN"); 
     
     $keyString = "FIELD_NOT_SET";
