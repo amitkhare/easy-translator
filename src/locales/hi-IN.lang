@@ -1,0 +1,31 @@
+{
+
+"FIELDS_DONT_MATCH" : "`%s` और `%s` एक-दूसरे से मेल नहीं खाते.",
+"FIELD_REQUIRED" : "`%s` ज़रूरी है.",
+"FIELD_NOT_SET" : " `%s` फील्ड खली है.",
+"FIELD_INVALID_IPV4": "`%s` फील्ड गलत IPv4 एड्रेस है.",
+"FIELD_INVALID_IPV6": "`%s` फील्ड गलत IPv6 एड्रेस है.",
+"FIELD_INVALID_FLOAT" : "`%s` में सिर्फ फ्लोट वैल्यू मान्य हैं.",
+"FIELD_INVALID_STRING" : "`%s` में सिर्फ स्ट्रिंग वैल्यू मान्य हैं.",
+"FIELD_INVALID_ALPHA" : "`%s` में सिर्फ अल्फाबेटिक [a-z,A-Z] वैल्यू मान्य हैं.",
+"FIELD_INVALID_ALPHA_NUMERIC" : "`%s` में सिर्फ अल्फानुमेरिक [a-z,A-Z,0-9] वैल्यू मान्य हैं.",
+"FIELD_INVALID_ALPHA_NUMERIC_UNICODE" : "`%s` में सिर्फ अल्फानुमेरिक+यूनिकोड [a-z,A-Z,0-9,+Unicode] वैल्यू मान्य हैं.",
+"FIELD_INVALID_NUMERIC" : "`%s` फील्ड में सिर्फ नुमेरिक [0-9] वैल्यू मान्य हैं.",
+"FIELD_INVALID_URL" : "`%s` फील्ड में सिर्फ URL मान्य हैं.",
+"FIELD_INVALID_EMAIL" : "`%s` फील्ड में सिर्फ ईमेल एड्रेस मान्य हैं.",
+"FIELD_INVALID_BOOLEAN" : "`%s` फील्ड में सिर्फ बूलियन [true/false] मान्य हैं.",
+"FIELD_VALUE_ALREADY_EXISTS" : "`%s` फील्ड वैल्यू पहले से डेटाबेस में है.",
+"DB_NOT_CONNECTED" : "डेटाबेस कनेक्ट नहीं है. `unique.%s` रूल अप्लाई नहीं कर सकते.",
+"FIELD_VALUE_TOO_LONG" : "`%s` फील्ड की वैल्यू बहुत ज्यादा है, इसे `%s` अक्षर से ज्यादा नहीं होना चाहिए.",
+"FIELD_VALUE_TOO_SHORT" : "`%s` फील्ड की वैल्यू बहुत कम है, इसे कम से कम `%s` अक्षर का होना चाहिए.",
+
+"USERNAME":"यूजरनेम",
+"FIRSTNAME":"प्रथम नाम",
+"LASTNAME":"उप नाम",
+"MIDDLENAME":"मध्य नाम",
+"EMAIL":"ईमेल",
+"PASSWORD":"पासवर्ड",
+"MOBILE":"मोबाइल",
+"PASSWORD_CONFIRM":"पासवर्ड कन्फर्म"
+
+}
