@@ -27,6 +27,7 @@
 
 class EasyTranslator {
     private static $localePath = __DIR__."/locales/";
+    private static $isFormatReplacement = true;
     private static $locale = "en-IN";
     
     public static function setLocale($locale){
@@ -124,9 +125,15 @@ class EasyTranslator {
         $string = ucwords($string);
         return $string;
     }
-    
+    public static function setFormatReplacement($format=true){
+        self::$isFormatReplacement = $format;
+    }
     private static function formatReplacement($replacement) {
-        return self::getString($replacement);
+        if(self::$isFormatReplacement){
+            return self::getString($replacement);
+        }
+        
+        else return $replacement;
     }
      
 }
