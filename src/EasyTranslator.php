@@ -29,6 +29,7 @@ class EasyTranslator {
     private static $localePath = __DIR__."/locales/";
     private static $isFormatReplacement = true;
     private static $locale = "en-IN";
+    private static $intermediateLocalePath = null;
     
     public static function setLocale($locale){
         
@@ -49,6 +50,13 @@ class EasyTranslator {
         	
         }
         
+    }
+    public static function setIntermediateLocalePath($localePath){
+        if(file_exists($localePath)) {
+    
+        	self::$intermediateLocalePath = realpath($localePath).DIRECTORY_SEPARATOR;
+        	
+        }
     }
     
     // same as translator
@@ -80,31 +88,39 @@ class EasyTranslator {
         
     }
     
-    
     private static function getString($keyString){
         
         $keyString = strtoupper($keyString);
         
-        if(!$val = self::fetchVal(self::$localePath.self::$locale.".lang",$keyString)){
-
-            // search locale in internal directory
-            if(!$val = self::fetchVal(__DIR__."/locales/".self::$locale.".lang",$keyString)){
-                
-                // search default locale in internal directory
-                if(!$val = self::fetchVal(__DIR__."/locales/en-IN.lang",$keyString)){
-                    
-                    // noting found return formatted keystring
-                    return self::formatString($keyString);
-                    
-                }
-                
-            }
-            
+        if($val = self::findString(self::$localePath, self::$locale, $keyString) ){
+           return $val; 
         }
-        // return fromatted found value;
-        return $val;
+        
+        if($val = self::findString(self::$intermediateLocalePath, self::$locale, $keyString) ){
+           return $val; 
+        }
+        
+        if($val = self::findString(__DIR__."/locales/", self::$locale, $keyString) ){
+           return $val; 
+        }
+        
+        // noting found return formatted keystring
+        return self::formatString($keyString);
 
     }
+    
+   private static function findString($localePath, $locale, $keyString){
+       $keyString = strtoupper($keyString);
+       
+       if($val =  self::fetchVal($localePath.$locale.".lang",$keyString) ){
+           return $val;
+       }
+       
+       if($val =  self::fetchVal($localePath."en-IN.lang",$keyString) ){
+           return $val;
+       }
+    
+   }
     
     private static function fetchVal($file,$keyString){
         if(file_exists($file)){
