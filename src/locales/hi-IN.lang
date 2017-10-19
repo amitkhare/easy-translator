@@ -19,6 +19,8 @@
 "FIELD_VALUE_TOO_LONG" : "`%s` फील्ड की वैल्यू बहुत ज्यादा है, इसे `%s` अक्षर से ज्यादा नहीं होना चाहिए.",
 "FIELD_VALUE_TOO_SHORT" : "`%s` फील्ड की वैल्यू बहुत कम है, इसे कम से कम `%s` अक्षर का होना चाहिए.",
 
+"DEVELOPED_BY_LINK" : "<a href='https://inkimagine.com?ref=%s' target='_blank'>इंकइमेजिन</a> द्वारा विकसित.",
+
 "USERNAME":"यूजरनेम",
 "FIRSTNAME":"प्रथम नाम",
 "LASTNAME":"उप नाम",
