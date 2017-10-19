@@ -19,6 +19,8 @@
 "FIELD_VALUE_TOO_LONG" : "The `%s` field value is too long, it should not more than `%s` characters.",
 "FIELD_VALUE_TOO_SHORT" : "The `%s` field value is too short, it should be at least `%s` characters long.",
 
+"DEVELOPED_BY_LINK" : "Developed by: <a href='https://inkimagine.com?ref=%s' target='_blank'>Inkimagine</a>",
+
 "USERNAME":"Username",
 "FIRSTNAME":"First Name",
 "LASTNAME":"Last Name",
