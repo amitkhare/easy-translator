@@ -28,6 +28,15 @@
 "EMAIL":"ईमेल",
 "PASSWORD":"पासवर्ड",
 "MOBILE":"मोबाइल",
+"NAME":"नाम",
+"ITEMS":"वस्तुएं",
+"ITEM":"वस्तु",
+"DATE":"दिनांक",
+"AVATAR":"अवतार",
+"PROFILE":"प्रोफाइल",
+"SETTINGS":"सेटिंग्स",
+"USER":"यूजर",
+"ADMIN":"",
 "PASSWORD_CONFIRM":"पासवर्ड कन्फर्म"
 
 }
