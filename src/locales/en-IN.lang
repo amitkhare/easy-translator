@@ -28,6 +28,15 @@
 "EMAIL":"Email",
 "PASSWORD":"Password",
 "MOBILE":"Mobile",
+"NAME":"Name",
+"ITEMS":"Items",
+"ITEM":"Item",
+"DATE":"Date",
+"AVATAR":"Avatar",
+"PROFILE":"Profile",
+"SETTINGS":"Settings",
+"USER":"User",
+"ADMIN":"Admin",
 "PASSWORD_CONFIRM":"Password Confirm"
 
 }
